@@ -4,7 +4,9 @@ public class Zeki {
 
     public static void main(String[] args) {
 
-        System.out.println("Yalandan yüzüme gülen dünya");
+        System.out.println("Hello world");
+        System.out.println("vay dünya vay");
+
 
     }
 }
