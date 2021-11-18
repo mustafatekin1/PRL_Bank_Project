@@ -12,8 +12,3 @@ public class Ali {
 System.out.println("Hello Bug Finders");
         }
 }
-
-        System.out.println("Heaven");
-    }
-}
-
