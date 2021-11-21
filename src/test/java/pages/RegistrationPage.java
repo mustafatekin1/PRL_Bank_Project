@@ -7,7 +7,7 @@ import utilities.Driver;
 
 public class RegistrationPage {
     public RegistrationPage(){
-        PageFactory.initElements(Driver.getDriver(),this); }
+        PageFactory.initElements(Driver.getDriver(),this);}
 
 
     @FindBy(id = "ssn")
@@ -33,4 +33,13 @@ public class RegistrationPage {
     public WebElement lastName;
 
 
-}
+
+
+        @FindBy(id = "#register-submit")
+        public WebElement registerButton2;
+
+        @FindBy(xpath = "//*[contains(text(), 'Registration saved')]")
+        public WebElement successMessage;
+
+    }
+
