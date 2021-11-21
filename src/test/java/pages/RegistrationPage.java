@@ -12,6 +12,12 @@ public class RegistrationPage {
     @FindBy(id = "ssn")
     public WebElement ssn;
 
+    @FindBy(id="login-item")
+    public WebElement signInButton;
+  
+   @FindBy(xpath="(//a[@class='dropdown-item'])[2]")
+    public WebElement registerButton;
+
     @FindBy(xpath= "(//input[@type='text'])[2]")
     public WebElement firstName;
 
