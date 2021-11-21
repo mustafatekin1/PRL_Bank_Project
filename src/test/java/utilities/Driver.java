@@ -10,7 +10,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import java.util.concurrent.TimeUnit;
 
 public abstract class Driver {
-    //My Driver class is abstract so I do not create an object of this class
+//My Driver class is abstract so I do not create an object of this class
 //TestBase class is also abstract
     private Driver(){
     }
