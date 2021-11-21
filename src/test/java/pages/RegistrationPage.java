@@ -9,8 +9,16 @@ public class RegistrationPage {
     public RegistrationPage(){
         PageFactory.initElements(Driver.getDriver(),this); }
 
+
     @FindBy(id = "ssn")
     public WebElement ssn;
+
+    @FindBy(id="email")
+    public WebElement email;
+    @FindBy(id="firstPassword")
+    public WebElement firstPassword;
+    @FindBy(id="secondPassword")
+    public WebElement secondPassword;
 
     @FindBy(id="login-item")
     public WebElement signInButton;
@@ -23,5 +31,6 @@ public class RegistrationPage {
 
     @FindBy(xpath = "(//input[@type='text'])[3]")
     public WebElement lastName;
+
 
 }
