@@ -11,4 +11,11 @@ public class LoginPage {
 
     @FindBy(xpath = "(//div[@tabindex='-1'])[1]")
     public WebElement registrationTab;
+
+    @FindBy(xpath = "//img[@alt='Logo']")
+    public WebElement gmiBankAssertion;
+
+
+
+
 }
