@@ -12,9 +12,27 @@ public class RegistrationPage {
     }
 
 
+    @FindBy(id = "ssn")
+    public WebElement ssn;
 
+    @FindBy(id="email")
+    public WebElement email;
+    @FindBy(id="firstPassword")
+    public WebElement firstPassword;
+    @FindBy(id="secondPassword")
+    public WebElement secondPassword;
 
+    @FindBy(id="login-item")
+    public WebElement signInButton;
+  
+   @FindBy(xpath="(//a[@class='dropdown-item'])[2]")
+    public WebElement registerButton;
 
+    @FindBy(xpath= "(//input[@type='text'])[2]")
+    public WebElement firstName;
+
+    @FindBy(xpath = "(//input[@type='text'])[3]")
+    public WebElement lastName;
 
 
 }
