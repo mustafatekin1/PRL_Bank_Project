@@ -9,7 +9,7 @@ public class LoginPage {
     public LoginPage(){
         PageFactory.initElements(Driver.getDriver(),this); }
 
-    @FindBy(xpath = "(//div[@tabindex='-1'])[1]")
+    @FindBy(xpath = "(//a[@class='dropdown-toggle nav-link'])[2]")
     public WebElement registrationTab;
 
     @FindBy(xpath = "//img[@alt='Logo']")

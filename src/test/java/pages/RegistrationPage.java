@@ -15,8 +15,10 @@ public class RegistrationPage {
 
     @FindBy(id="email")
     public WebElement email;
+
     @FindBy(id="firstPassword")
     public WebElement firstPassword;
+
     @FindBy(id="secondPassword")
     public WebElement secondPassword;
 
@@ -32,14 +34,20 @@ public class RegistrationPage {
     @FindBy(xpath = "(//input[@type='text'])[3]")
     public WebElement lastName;
 
+    @FindBy(xpath = "//input[@name='address']")
+    public WebElement addressTab;
 
+    @FindBy(id = "mobilephone")
+    public WebElement phoneTab;
 
+    @FindBy(id = "register-submit")
+    public WebElement registerButton2;
 
-        @FindBy(id = "#register-submit")
-        public WebElement registerButton2;
+    @FindBy(xpath = "//*[contains(text(), 'confirmation')]")
+    public WebElement successMessage;
 
-        @FindBy(xpath = "//*[contains(text(), 'Registration saved')]")
-        public WebElement successMessage;
+    @FindBy(id = "username")
+    public WebElement userNameTab;
 
     }
 
