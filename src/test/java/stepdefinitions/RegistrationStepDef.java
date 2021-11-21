@@ -6,11 +6,14 @@ import pages.LoginPage;
 import pages.RegistrationPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import com.github.javafaker.Faker;
 
 public class RegistrationStepDef {
 
     LoginPage loginpage = new LoginPage();
     RegistrationPage registrationPage = new RegistrationPage();
+    Faker faker = new Faker();
+
 
     @Given("user is on the main  page")
     public void user_is_on_the_main_page() {
@@ -29,7 +32,7 @@ public class RegistrationStepDef {
 
     @Given("user enters SSN {string} number")
     public void user_enters_ssn_number(String SSN) {
-        registrationPage.ssn.sendKeys(SSN);
+        registrationPage.ssn.sendKeys(faker.number().digits(9));
     }
 
     @Given("user enters firstname {string}")
@@ -81,5 +84,6 @@ public class RegistrationStepDef {
         Assert.assertTrue(registrationPage.successMessage.getText().contains("Please check your email for confirmation"));
 
     }
+
 }
 
