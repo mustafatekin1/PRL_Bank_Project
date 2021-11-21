@@ -4,7 +4,6 @@ import pojos.Customer;
 import pojos.Registrant;
 import pojos.States;
 import pojos.User;
-​
 
 import java.io.BufferedReader;
 import java.io.FileReader;
