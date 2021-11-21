@@ -7,7 +7,7 @@ import utilities.Driver;
 
 public class RegistrationPage {
     public RegistrationPage(){
-        PageFactory.initElements(Driver.getDriver(),this); }
+        PageFactory.initElements(Driver.getDriver(),this);}
 
 
 
@@ -15,4 +15,22 @@ public class RegistrationPage {
 
 
 
-}
+
+
+
+
+
+
+
+
+
+
+
+        @FindBy(id = "#register-submit")
+        public WebElement registerButton;
+
+        @FindBy(xpath = "//*[contains(text(), 'Registration saved')]")
+        public WebElement successMessage;
+
+    }
+
