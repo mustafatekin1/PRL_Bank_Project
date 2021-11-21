@@ -1,6 +1,6 @@
 package stepdefinitions;
 
-public class Faik {
+public class Fae {
 
     //First commit
 }
