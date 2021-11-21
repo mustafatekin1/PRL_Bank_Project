@@ -16,9 +16,9 @@ import utilities.Driver;
                 "rerun:target/failedRerun.txt",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
-        features = ".\\src\\test\\resources\\features",
+        features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = " ",
+        tags = "@registerNewUserUI",
         dryRun = false
 )
 public class Runner {

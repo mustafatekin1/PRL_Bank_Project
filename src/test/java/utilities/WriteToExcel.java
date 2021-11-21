@@ -41,8 +41,9 @@ public class WriteToExcel {
             e.printStackTrace();
         }
     }
-    public static List<User> getCustomers() {
+   /* public static List<User> getCustomers() {
         List<User> customers =
                 ReadTxt.returnAWholeUser(ConfigurationReader.getProperty("fileNameOfCustomer"));
         return customers;
-    }
+    } */
+}
