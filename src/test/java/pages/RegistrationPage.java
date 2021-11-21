@@ -7,23 +7,27 @@ import utilities.Driver;
 
 public class RegistrationPage {
     public RegistrationPage(){
-        PageFactory.initElements(Driver.getDriver(),this);}
 
+        PageFactory.initElements(Driver.getDriver(),this);
+
+    }
 
     @FindBy(id = "ssn")
     public WebElement ssn;
 
     @FindBy(id="email")
     public WebElement email;
+
     @FindBy(id="firstPassword")
     public WebElement firstPassword;
+
     @FindBy(id="secondPassword")
     public WebElement secondPassword;
 
     @FindBy(id="login-item")
     public WebElement signInButton;
   
-   @FindBy(xpath="(//a[@class='dropdown-item'])[2]")
+    @FindBy(xpath="(//a[@class='dropdown-item'])[2]")
     public WebElement registerButton;
 
     @FindBy(xpath= "(//input[@type='text'])[2]")
