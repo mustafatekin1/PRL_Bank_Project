@@ -17,6 +17,7 @@
       And user enters new password2 "<newpassword2>"
 
       And click the register button
+
       Then verify the success message
 
 
