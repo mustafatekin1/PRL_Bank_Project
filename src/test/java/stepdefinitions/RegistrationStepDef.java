@@ -27,6 +27,7 @@ public class RegistrationStepDef {
 
     @Given("user is on the main  page")
     public void user_is_on_the_main_page() {
+
         Driver.getDriver().get(ConfigReader.getProperty("url"));
     }
 

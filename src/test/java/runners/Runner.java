@@ -18,8 +18,8 @@ import utilities.Driver;
         },
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@registerNewUserUI",
-        dryRun = false
+        tags = "@date",
+        dryRun = true
 )
 public class Runner {
 
