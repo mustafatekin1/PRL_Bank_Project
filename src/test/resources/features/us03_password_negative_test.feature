@@ -1,11 +1,11 @@
 @NewApplicants
 Feature: Register new applicants
 
-  @registerNewUserUINegativePassword
+  @Negative_Password
   Scenario Outline: Register new users for GMI Bank Negative Password
     Given user is on the main  page
     And user verifies the GMIBANK text
-    And navigates the registration pagemenu
+    And navigates the registration page
     And user enters SSN "<SSN>" number
     And user enters firstname "<firstname>"
     And user enters lastname "<lastname>"
