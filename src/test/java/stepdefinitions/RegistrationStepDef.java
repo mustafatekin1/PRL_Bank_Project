@@ -7,8 +7,12 @@ import pages.RegistrationPage;
 import pojos.Registrant;
 import utilities.ConfigReader;
 import utilities.Driver;
+
 import utilities.ReusableMethods;
 import utilities.WriteToTxt;
+
+import com.github.javafaker.Faker;
+
 
 public class RegistrationStepDef {
 
@@ -16,16 +20,20 @@ public class RegistrationStepDef {
     RegistrationPage registrationPage = new RegistrationPage();
     String path = "src/test/resources/test_data/customer_information.txt";
     Registrant registrant = new Registrant();
+    Faker faker = new Faker();
+
 
     @Given("user is on the main  page")
     public void user_is_on_the_main_page() {
         Driver.getDriver().get(ConfigReader.getProperty("url"));
     }
+
     @Given("user verifies the GMIBANK text")
     public void user_verifies_the_gmibank_text() {
         Assert.assertTrue(Driver.getDriver().getTitle().contains("GMIBANK"));
 
     }
+
     @Given("navigates the registration page")
     public void navigates_the_registration_page() {
         loginpage.registrationTab.click();
@@ -34,9 +42,9 @@ public class RegistrationStepDef {
 
     @Given("user enters SSN {string} number")
     public void user_enters_ssn_number(String SSN) {
-        registrationPage.ssn.sendKeys(SSN);
-        registrant.setSsn(SSN);
 
+        registrationPage.ssn.sendKeys(faker.number().digits(9));
+        registrant.setSsn(SSN);
     }
 
     @Given("user enters firstname {string}")
@@ -74,11 +82,13 @@ public class RegistrationStepDef {
         registrationPage.email.sendKeys(email);
         registrant.setEmail(email);
     }
+
     @Given("user enters new password {string}")
     public void user_enters_new_password_number(String newpassword) {
         registrationPage.firstPassword.sendKeys(newpassword);
         registrant.setPassword(newpassword);
     }
+
     @Given("user enters new password2 {string}")
     public void user_enters_new_password2_number(String newpassword2) {
         registrationPage.secondPassword.sendKeys(newpassword2);
@@ -88,7 +98,7 @@ public class RegistrationStepDef {
     public void click_the_register_button() {
         registrationPage.registerButton2.click();
         ReusableMethods.waitFor(1);
-        WriteToTxt.saveRegistrantData(path,registrant);
+        WriteToTxt.saveRegistrantData(path, registrant);
     }
 
     @Then("verify the success message")
@@ -97,5 +107,6 @@ public class RegistrationStepDef {
         Assert.assertTrue(registrationPage.successMessage.getText().contains("Registration saved"));
 
     }
+
 }
 
