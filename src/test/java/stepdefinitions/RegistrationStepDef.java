@@ -39,7 +39,7 @@ public class RegistrationStepDef {
 
     @Given("navigates the registration page")
     public void navigates_the_registration_page() {
-        mainPage.registrationTab.click();
+        mainPage.signInAndRegistrationTab.click();
         mainPage.registerButton.click();
     }
 
