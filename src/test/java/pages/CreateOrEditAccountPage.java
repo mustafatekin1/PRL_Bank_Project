@@ -7,8 +7,12 @@ import utilities.Driver;
 
 public class CreateOrEditAccountPage {
     public CreateOrEditAccountPage(){
+
         PageFactory.initElements(Driver.getDriver(),this);
     }
+    @FindBy(xpath = "//span[text()='Create or edit a Account']")
+    public WebElement createOrEditAccountText;
+
     @FindBy(id = "tp-account-description")
     public WebElement descriptionBox;
 
