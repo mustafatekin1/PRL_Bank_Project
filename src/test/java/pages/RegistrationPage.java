@@ -45,8 +45,9 @@ public class RegistrationPage {
     @FindBy(id = "register-submit")
     public WebElement registerButton2;
 
-    @FindBy(xpath = "//*[contains(text(), 'Registration saved')]")
-    public WebElement successMessage; 
+    @FindBy(xpath = "//*[contains(text(),'Registration saved')]")
+    public WebElement successMessage;
+
 
     @FindBy(id = "mobilephone")
     public WebElement phoneTab;
