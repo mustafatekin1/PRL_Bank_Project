@@ -4,13 +4,18 @@ import io.cucumber.java.en.*;
 import junit.framework.Assert;
 import pages.LoginPage;
 import pages.RegistrationPage;
+import pojos.Registrant;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
+import utilities.WriteToTxt;
 
 public class RegistrationStepDef {
 
     LoginPage loginpage = new LoginPage();
     RegistrationPage registrationPage = new RegistrationPage();
+    String path = "src/test/resources/test_data/customer_information.txt";
+    Registrant registrant = new Registrant();
 
     @Given("user is on the main  page")
     public void user_is_on_the_main_page() {
@@ -30,40 +35,49 @@ public class RegistrationStepDef {
     @Given("user enters SSN {string} number")
     public void user_enters_ssn_number(String SSN) {
         registrationPage.ssn.sendKeys(SSN);
+        registrant.setSsn(SSN);
+
     }
 
     @Given("user enters firstname {string}")
     public void user_enters_firstname_number(String firstname) {
         registrationPage.firstName.sendKeys(firstname);
+        registrant.setFirstName(firstname);
     }
 
     @Given("user enters lastname {string}")
     public void user_enters_lastname_number(String lastname) {
         registrationPage.lastName.sendKeys(lastname);
+        registrant.setLastName(lastname);
     }
 
     @Given("user enters address {string}")
     public void user_enters_address_number(String address) {
         registrationPage.addressTab.sendKeys(address);
+        registrant.setAddress(address);
     }
 
     @Given("user enters phonenumber {string}")
     public void user_enters_phone_number_number(String phonenumber) {
         registrationPage.phoneTab.sendKeys(phonenumber);
+        registrant.setPhoneNumber(phonenumber);
     }
 
     @Given("user enters username {string}")
     public void user_enters_username_number(String username) {
         registrationPage.userNameTab.sendKeys(username);
+        registrant.setUserName(username);
     }
 
     @Given("user enters email {string}")
     public void user_enters_email_number(String email) {
         registrationPage.email.sendKeys(email);
+        registrant.setEmail(email);
     }
     @Given("user enters new password {string}")
     public void user_enters_new_password_number(String newpassword) {
         registrationPage.firstPassword.sendKeys(newpassword);
+        registrant.setPassword(newpassword);
     }
     @Given("user enters new password2 {string}")
     public void user_enters_new_password2_number(String newpassword2) {
@@ -73,12 +87,14 @@ public class RegistrationStepDef {
     @Given("click the register button")
     public void click_the_register_button() {
         registrationPage.registerButton2.click();
+        ReusableMethods.waitFor(1);
+        WriteToTxt.saveRegistrantData(path,registrant);
     }
 
     @Then("verify the success message")
     public void verify_the_success_message() {
         System.out.println(registrationPage.successMessage.getText());
-        Assert.assertTrue(registrationPage.successMessage.getText().contains("Please check your email for confirmation"));
+        Assert.assertTrue(registrationPage.successMessage.getText().contains("Registration saved"));
 
     }
 }
