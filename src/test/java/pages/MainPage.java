@@ -13,7 +13,7 @@ public MainPage(){
     public WebElement gmiBankAssertion;
 
     @FindBy(xpath = "(//a[@class='dropdown-toggle nav-link'])[2]")
-    public WebElement registrationTab;
+    public WebElement signInAndRegistrationTab;
 
     @FindBy(xpath="(//a[@class='dropdown-item'])[2]")
     public WebElement registerButton;
