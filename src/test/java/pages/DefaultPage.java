@@ -10,10 +10,10 @@ public class DefaultPage {
     public DefaultPage(){
         PageFactory.initElements(Driver.getDriver(),this); }
 
-    @FindBy(xpath = "//.[*='BF Employee1']")
+    @FindBy(xpath = "//span[.='BF Employee1']")
     public WebElement employeeAccountNameText;
 
-    @FindBy(xpath = "//.[*='BF Manager1']")
+    @FindBy(xpath = "//span[.='BF Manager1']")
     public WebElement managerAccountNameText;
 
     @FindBy(xpath = "(//a[@class='dropdown-toggle nav-link'])[2]")
