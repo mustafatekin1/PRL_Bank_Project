@@ -9,11 +9,36 @@ public class LoginPage {
     public LoginPage(){
         PageFactory.initElements(Driver.getDriver(),this); }
 
-    @FindBy(xpath = "(//div[@tabindex='-1'])[1]")
-    public WebElement registrationTab;
 
-    @FindBy(xpath = "//img[@alt='Logo']")
-    public WebElement gmiBankAssertion;
+    @FindBy(xpath = "//input[@name='username']")
+    public WebElement loginUserName;
+
+    @FindBy(xpath = "//div[@class='invalid-feedback']")
+    public WebElement loginUserNameAssertion;
+
+    @FindBy(id = "password")
+    public WebElement loginPassword;
+
+    @FindBy(xpath = "//div[@class='invalid-feedback']")
+    public WebElement loginPasswordAssertion;
+
+    @FindBy(xpath = "//a[@href='/account/reset/request']")
+    public WebElement forgetPassword;
+
+    @FindBy(xpath = "(//a[@href='/account/register'])[2]")
+    public WebElement registerNewAccount;
+
+    @FindBy(xpath = "//button[@class='btn btn-primary']")
+    public WebElement signInButton;
+
+
+
+
+
+
+
+
+
 
 
 

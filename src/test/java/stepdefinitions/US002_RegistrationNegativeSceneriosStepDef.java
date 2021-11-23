@@ -32,7 +32,7 @@ public class US002_RegistrationNegativeSceneriosStepDef {
     }
     @Given("click the registration button")
     public void click_the_registration_button() {
-        registrationPage.registerButton.click();
+        registrationPage.passwordShouldContain.click();
     }
     @Given("user enter char character {string}")
     public void user_enter_char_character(String phonenumber) {
