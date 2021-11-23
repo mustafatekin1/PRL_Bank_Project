@@ -29,9 +29,6 @@ public class RegistrationPage {
 
     @FindBy(id="login-item")
     public WebElement signInButton;
-  
-    @FindBy(xpath="(//a[@class='dropdown-item'])[2]")
-    public WebElement registerButton;
 
     @FindBy(xpath= "(//input[@type='text'])[2]")
     public WebElement firstName;
@@ -55,6 +52,11 @@ public class RegistrationPage {
     @FindBy(id = "username")
     public WebElement userNameTab;
 
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[1]")
+    public WebElement passwordShouldContain;
+
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[2]")
+    public WebElement passwordShouldMatchWithFirstOne;
 
     }
 

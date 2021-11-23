@@ -3,6 +3,7 @@ package stepdefinitions;
 import io.cucumber.java.en.*;
 import junit.framework.Assert;
 import pages.LoginPage;
+import pages.MainPage;
 import pages.RegistrationPage;
 import pojos.Registrant;
 import utilities.ConfigReader;
@@ -21,10 +22,12 @@ public class RegistrationStepDef {
     String path = "src/test/resources/test_data/customer_information.txt";
     Registrant registrant = new Registrant();
     Faker faker = new Faker();
+    MainPage mainPage = new MainPage();
 
 
     @Given("user is on the main  page")
     public void user_is_on_the_main_page() {
+
         Driver.getDriver().get(ConfigReader.getProperty("url"));
     }
 
@@ -32,12 +35,13 @@ public class RegistrationStepDef {
     public void user_verifies_the_gmibank_text() {
         Assert.assertTrue(Driver.getDriver().getTitle().contains("GMIBANK"));
 
+
     }
 
     @Given("navigates the registration page")
     public void navigates_the_registration_page() {
-        loginpage.registrationTab.click();
-        registrationPage.registerButton.click();
+        mainPage.signInAndRegistrationTab.click();
+        mainPage.registerButton.click();
     }
 
     @Given("user enters SSN {string} number")
