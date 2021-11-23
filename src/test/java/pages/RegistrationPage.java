@@ -44,6 +44,12 @@ public class RegistrationPage {
     @FindBy(id = "mobilephone")
     public WebElement phoneTab;
 
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[1]")
+    public WebElement invalidSsnText;
+
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[6]")
+    public WebElement invalidEmailText;
+
 
 
 
