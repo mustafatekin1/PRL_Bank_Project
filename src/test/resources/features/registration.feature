@@ -49,7 +49,7 @@
       Examples:
         | SSN         | firstname | lastname | address  | phonenumber | username | email             | newpassword | newpassword2 |
         | 256-45-7862 | faik      | ali      | istanbul | 9515555495  | faik39  | faik39@gmail.com   | 34.Faik-    | 34.Faik-     |
-        |257-46-7864  |zafer      |zafer     |ankara    | 9876326638  |faika    |fa@gmail.com        |34.Zafeer-   |34.Zafeer-    |
+
 
 
 
