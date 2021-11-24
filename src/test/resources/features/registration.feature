@@ -75,4 +75,3 @@
 #      Examples:
 #        | SSN         | firstname | lastname | address  | phonenumber | username | email             | newpassword | newpassword2 |
 #        | 256-45-7862 | faik      | ali      | istanbul | 9515555495  | faik39  | faik39@gmail.com   | 34.Faik-    | 34.Faik-     |
-
