@@ -8,8 +8,6 @@ import utilities.Driver;
 public class RegistrationPage {
     public RegistrationPage(){
 
-
-
         PageFactory.initElements(Driver.getDriver(),this);
 
     }
@@ -45,7 +43,6 @@ public class RegistrationPage {
     @FindBy(xpath = "//*[contains(text(),'Registration saved')]")
     public WebElement successMessage;
 
-
     @FindBy(id = "mobilephone")
     public WebElement phoneTab;
   
@@ -53,10 +50,17 @@ public class RegistrationPage {
     public WebElement userNameTab;
 
     @FindBy(xpath = "//div[@class='invalid-feedback']")
-    public WebElement passwordShouldContain;//div[@class='invalid-feedback']
+    public WebElement invalidSsnText;
+    public WebElement passwordShouldContain;
 
-    @FindBy(xpath = "(//div[@class='invalid-feedback'])")
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[6]")
+    public WebElement invalidEmailText;
+
+
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])[2]")
     public WebElement passwordShouldMatchWithFirstOne;
+
+
 
     @FindBy(xpath = "(//li[@class='point'])[1]")
     public WebElement passwordStrength1;
