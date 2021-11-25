@@ -18,7 +18,7 @@ import utilities.Driver;
         },
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@customer_creation_byemployee",
+        tags = "@date",
         dryRun = false
 
 )

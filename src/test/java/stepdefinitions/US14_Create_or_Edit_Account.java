@@ -117,7 +117,8 @@ public class US14_Create_or_Edit_Account {
        createOrEditAccountPage.employeeBox.click();
        Select select = new Select(createOrEditAccountPage.employeeBox);
        select.selectByIndex(0);
-       //Assert.assertTrue(createOrEditAccountPage.employeeBox.getAttribute("value"));
+       String employee= createOrEditAccountPage.employeeBox.getAttribute("value");
+       Assert.assertFalse(employee.isEmpty());
     }
     @Then("user clicks Save button")
     public void user_clicks_save_button() {
