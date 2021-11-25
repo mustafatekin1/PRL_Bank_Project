@@ -31,6 +31,9 @@ public class LoginPage {
     @FindBy(xpath = "//button[@class='btn btn-primary']")
     public WebElement signInButton;
 
+    @FindBy(xpath = "(//span[text()='Sign in'])[2]")
+    public WebElement singInText;
+
 
 
 
