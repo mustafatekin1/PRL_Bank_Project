@@ -18,8 +18,10 @@ import utilities.Driver;
         },
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@Password_Negative_Test_On_Login_Page",
-        dryRun = true
+
+        tags = "@date",
+        dryRun = false
+
 )
 public class Runner {
 
