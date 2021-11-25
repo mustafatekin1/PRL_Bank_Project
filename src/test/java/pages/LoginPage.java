@@ -34,6 +34,13 @@ public class LoginPage {
     @FindBy(partialLinkText = "My Operations")
     public WebElement myOperations;
 
+    @FindBy(xpath = "//h1")
+    public WebElement resetYourPasswordText;
+
+    @FindBy(id = "register-title")
+    public WebElement registerTitleText;
+
+
 
 
 
