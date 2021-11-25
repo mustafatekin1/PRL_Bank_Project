@@ -31,6 +31,8 @@ public class LoginPage {
     @FindBy(xpath = "//button[@class='btn btn-primary']")
     public WebElement signInButton;
 
+    @FindBy(partialLinkText = "My Operations")
+    public WebElement myOperations;
 
 
 

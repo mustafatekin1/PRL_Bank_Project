@@ -18,7 +18,7 @@ import utilities.Driver;
         },
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@customer_login",
+        tags = "@customer_creation_byemployee",
         dryRun = false
 )
 public class Runner {

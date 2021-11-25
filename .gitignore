@@ -4,3 +4,4 @@ target
 .DS_Store
 test-output
 *.txt
+src/test/java/stepdefinitions/US03_05_Negative_Password_Step_Defs.java
