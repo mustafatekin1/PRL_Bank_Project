@@ -31,3 +31,4 @@ Feature: Registration_negative
 
   Examples:
     | SSN         | firstname | lastname | address       | phonenumber | username | email       | newpassword  | newpassword2 |
+     |             |           |          |               |             |          |             |              |              |
