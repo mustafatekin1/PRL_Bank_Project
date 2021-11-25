@@ -24,4 +24,8 @@ public class DefaultPage {
 
     @FindBy(xpath = "//*[contains(text(),'Manage Accounts')]")
     public WebElement manageAccounts;
+
+    @FindBy(xpath = "//*[contains(text(), 'My Operations')]")
+    public WebElement myOperationsText;
+
 }
