@@ -37,7 +37,7 @@ public class US03_05_Negative_Password_Step_Defs {
         registrationPage.firstPassword.sendKeys(ConfigReader.getProperty("invalidPasswordWithoutSpecChar"), Keys.ENTER);
         Assert.assertTrue(registrationPage.registerButton2.getText().contains("Your password should contain at least"));
     }
-    @Then("user enters different from first password {string}")
+   /* @Then("user enters different from first password {string}")
     public void user_enters_different_from_first_password(String string) {
         registrationPage.secondPassword.sendKeys(ConfigReader.getProperty("invalidPasswordDifferentFromFirst"), Keys.ENTER);
         Assert.assertTrue(registrationPage.registerButton2.getText().contains("Your password should contain at least"));
@@ -45,7 +45,7 @@ public class US03_05_Negative_Password_Step_Defs {
     @Then("user verifies different from first password message")
     public void user_verifies_different_from_first_password_message() {
    Assert.assertTrue(registrationPage.passwordShouldMatchWithFirstOne.isDisplayed());
-    }
+    }*/
     @Then("user enters negative Without Digits password {string}")
     public void user_enters_negative_without_digits_password(String string) {
        registrationPage.firstPassword.sendKeys(ConfigReader.getProperty("invalidPasswordWithoutDigits"), Keys.ENTER);
