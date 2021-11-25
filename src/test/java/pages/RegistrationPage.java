@@ -52,11 +52,23 @@ public class RegistrationPage {
     @FindBy(id = "username")
     public WebElement userNameTab;
 
-    @FindBy(xpath = "(//div[@class='invalid-feedback'])[1]")
+    @FindBy(xpath = "//div[@class='invalid-feedback']")
     public WebElement passwordShouldContain;//div[@class='invalid-feedback']
 
-    @FindBy(xpath = "(//div[@class='invalid-feedback'])[2]")
+    @FindBy(xpath = "(//div[@class='invalid-feedback'])")
     public WebElement passwordShouldMatchWithFirstOne;
+
+    @FindBy(xpath = "(//li[@class='point'])[1]")
+    public WebElement passwordStrength1;
+    @FindBy(xpath = "(//li[@class='point'])[2]")
+    public WebElement passwordStrength2;
+    @FindBy(xpath = "(//li[@class='point'])[3]")
+    public WebElement passwordStrength3;
+    @FindBy(xpath = "(//li[@class='point'])[4]")
+    public WebElement passwordStrength4;
+    @FindBy(xpath = "(//li[@class='point'])[5]")
+    public WebElement passwordStrength5;
+
 
     }
 
