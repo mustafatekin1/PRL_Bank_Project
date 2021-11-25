@@ -31,11 +31,15 @@ public class LoginPage {
     @FindBy(xpath = "//button[@class='btn btn-primary']")
     public WebElement signInButton;
 
+    @FindBy(partialLinkText = "My Operations")
+    public WebElement myOperations;
+
     @FindBy(xpath = "//h1")
     public WebElement resetYourPasswordText;
 
     @FindBy(id = "register-title")
     public WebElement registerTitleText;
+
 
 
 
