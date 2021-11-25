@@ -18,8 +18,10 @@ import utilities.Driver;
         },
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
+
         tags = "@date",
         dryRun = false
+
 )
 public class Runner {
 
