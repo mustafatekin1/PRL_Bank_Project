@@ -49,7 +49,6 @@ public class RegistrationPage {
     @FindBy(id = "username")
     public WebElement userNameTab;
 
-
     @FindBy(xpath = "//div[@class='invalid-feedback']")
     public WebElement passwordShouldContain;
 
@@ -59,10 +58,8 @@ public class RegistrationPage {
     @FindBy(xpath = "(//div[@class='invalid-feedback'])[6]")
     public WebElement invalidEmailText;
 
-
     @FindBy(xpath = "(//div[@class='invalid-feedback'])[2]")
     public WebElement passwordShouldMatchWithFirstOne;
-
 
     @FindBy(xpath = "//div[@class='invalid-feedback']")
     public WebElement emailTextIncorrectMessage;
