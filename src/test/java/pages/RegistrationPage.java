@@ -45,7 +45,7 @@ public class RegistrationPage {
 
     @FindBy(id = "mobilephone")
     public WebElement phoneTab;
-  
+
     @FindBy(id = "username")
     public WebElement userNameTab;
 
