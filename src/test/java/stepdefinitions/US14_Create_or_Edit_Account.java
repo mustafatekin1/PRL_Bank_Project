@@ -44,7 +44,7 @@ public class US14_Create_or_Edit_Account {
     }
     @Given("user enters Sing in button")
     public void user_enters_sing_in_button() {
-        loginPage.signInButton.click();
+        loginPage.signInButtonTab.click();
         ReusableMethods.waitFor(2);
     }
     @Given("user navigates the default page")
