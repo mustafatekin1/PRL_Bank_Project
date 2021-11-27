@@ -2,7 +2,7 @@
 @Password_Strength_Test
 Feature: Register new applicants
   Background: Out Of Duty
-    Given user is on the main  page
+    Given user is on the main  pageg
     And user verifies the GMIBANK text
 
   @Registration_Page_Password_Strength_Test
