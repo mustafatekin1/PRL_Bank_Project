@@ -18,7 +18,7 @@ import utilities.Driver;
         },
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-        tags = "@date",
+        tags = " @datePositive",
         dryRun = false
 
 )
