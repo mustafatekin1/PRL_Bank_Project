@@ -16,7 +16,7 @@ public class US14_Create_or_Edit_Account_Negative_StepDefs {
     @Given("user enters early Create Date")
     public void user_enters_early_create_date() {
         LocalDateTime dateTime = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy hh:mm a");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm a");
         String text1 = formatter.format(dateTime.minusDays(2));
         String text2 = formatter.format(dateTime);
         createOrEditAccountPage.createDateBox.sendKeys(text1);

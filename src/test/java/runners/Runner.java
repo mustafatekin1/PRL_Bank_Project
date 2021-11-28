@@ -18,8 +18,7 @@ import utilities.Driver;
         },
         features = "./src/test/resources/features",
         glue = "stepdefinitions",
-
-        tags = " @datePositive",
+        tags = "@dateNegative",
         dryRun = false
 )
 public class Runner {
