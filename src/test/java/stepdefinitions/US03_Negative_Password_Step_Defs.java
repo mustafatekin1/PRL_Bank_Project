@@ -76,8 +76,12 @@ public class US03_Negative_Password_Step_Defs {
 
     @And("user close the application")
     public void user_close_the_application() {
+<<<<<<< HEAD
+       Driver.closeDriver();
+=======
 
         Driver.closeDriver();
+>>>>>>> master
     }
 
 }
