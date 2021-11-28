@@ -51,15 +51,15 @@ public class US03_Negative_Password_Step_Defs {
         registrationPage.firstPassword.clear();
 
     }
-    @Then("user enters different from first password {string}")
-    public void user_enters_different_from_first_password(String string) {
-
-        registrationPage.firstPassword.sendKeys(ConfigReader.getProperty("validPassword"));
-        Assert.assertTrue(registrationPage.passwordStrength5.isDisplayed());
-        registrationPage.secondPassword.sendKeys(ConfigReader.getProperty("invalidPasswordDifferentFromFirst"));
-        ReusableMethods.waitFor(1);
-
-    }
+//    @Then("user enters different from first password {string}")
+//    public void user_enters_different_from_first_password(String string) {
+//
+//        registrationPage.firstPassword.sendKeys(ConfigReader.getProperty("validPassword"));
+//        Assert.assertTrue(registrationPage.passwordStrength5.isDisplayed());
+//        registrationPage.secondPassword.sendKeys(ConfigReader.getProperty("invalidPasswordDifferentFromFirst"));
+//        ReusableMethods.waitFor(1);
+//
+//    }
     @Then("verify the confirmation message")
     public void verify_the_confirmation_message() {
         Assert.assertTrue(registrationPage.passwordShouldMatchWithFirstOne.getText().contains("do not match!"));
@@ -67,12 +67,12 @@ public class US03_Negative_Password_Step_Defs {
 
     }
 
-    @Then("user verifies different from first password message")
-    public void user_verifies_different_from_first_password_message() {
-        registrationPage.secondPassword.clear();
-        registrationPage.secondPassword.sendKeys(ConfigReader.getProperty("validPassword"));
-        ReusableMethods.waitFor(3);
-    }
+//    @Then("user verifies different from first password message")
+//    public void user_verifies_different_from_first_password_message() {
+//        registrationPage.secondPassword.clear();
+//        registrationPage.secondPassword.sendKeys(ConfigReader.getProperty("validPassword"));
+//        ReusableMethods.waitFor(3);
+//    }
 
     @Then("user close the application")
     public void user_close_the_application() {
