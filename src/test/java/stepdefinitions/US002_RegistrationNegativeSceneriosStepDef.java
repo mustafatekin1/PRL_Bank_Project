@@ -1,7 +1,5 @@
 package stepdefinitions;
 
-
-
 import io.cucumber.java.en.Given;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
@@ -30,30 +28,18 @@ public class US002_RegistrationNegativeSceneriosStepDef {
     public void user_enter_a_number(String shortSSN) {
        registrationPage.ssn.sendKeys(shortSSN, Keys.ENTER);
     }
-
-//    @Given("user see the invalid short SSN message")
-//    public void user_see_the_invalid_short_ssn_message() {
-//        ReusableMethods.waitFor(1);
-//       registrationPage.invalidSsnText.getText();
-//    }
-
     @Given("user verify the short SSN invalid message")
     public void user_verify_the_short_ssn_invalid_message() {
         ReusableMethods.waitFor(1);
         String expected="Ssn is invalid.";
         Assert.assertEquals(expected,(registrationPage.invalidSsnText.getText()));
     }
-
     @Given("user enter charSSN {string}")
     public void user_enter(String charSSN) {
         registrationPage.ssn.clear();
         registrationPage.ssn.sendKeys(charSSN,Keys.ENTER);
 
     }
-//    @Given("user see the invalid char SSN message")
-//    public void user_see_the_invalid_char_ssn_message() {
-//        registrationPage.invalidSsnText.getText();
-//    }
     @Given("user verify the {string} invalid message")
     public void user_verify_the_invalid_message(String charSSN) {
         String expected="Ssn is invalid.";
@@ -64,13 +50,7 @@ public class US002_RegistrationNegativeSceneriosStepDef {
     public void user_enters_number(String longSSN) {
         registrationPage.ssn.clear();
         registrationPage.ssn.sendKeys (longSSN,Keys.ENTER);
-
     }
-//    @Given("user see the invalid long SSN message")
-//    public void user_see_the_invalid_long_ssn_message() {
-//        registrationPage.invalidSsnText.getText();
-//
-//    }
     @Given("user verify the long SSN invalid message")
     public void user_verify_the_long_ssn_invalid_message() {
 
@@ -81,26 +61,15 @@ public class US002_RegistrationNegativeSceneriosStepDef {
         registrationPage.ssn.clear();
        registrationPage.ssn.sendKeys(blankSSN,Keys.ENTER);
     }
-//    @Given("user see the blank invalid SSN message")
-//    public void user_see_the_blank_invalid_ssn_message() {
-//        registrationPage.invalidSsnText.getText();
-//
-//    }
     @Given("user verify the blank invalid SSN message")
     public void user_verify_the_blank_invalid_ssn_message() {
         String expected="Please enter your social security number.";
         Assert.assertEquals(expected,registrationPage.InvalidBlankSSN.getText());
 
     }
-
     @Given("user left it {string}")
     public void user_left_it(String blankFirstName) {
        registrationPage.firstName.sendKeys(blankFirstName,Keys.ENTER);
-
-    }
-    @Given("user see the  blank invalid first name message")
-  public void user_see_the_blank_invalid_first_name_message() {
-       registrationPage.blankUserName.getText();
 
     }
     @Given("user verify the invalid first name message")
@@ -113,10 +82,6 @@ public class US002_RegistrationNegativeSceneriosStepDef {
     public void user_enters(String invalidLastname) {
         registrationPage.lastName.sendKeys(invalidLastname,Keys.ENTER);
     }
-//    @Given("user see the invalid last name message")
-//    public void user_see_the_invalid_last_name_message() {
-//        registrationPage.blankLastname.getText();
-//    }
     @Given("user verify the last name invalid message")
     public void user_verify_the_last_name_invalid_message() {
         String expected="Please enter your last name.";
